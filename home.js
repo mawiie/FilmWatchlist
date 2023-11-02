@@ -43,7 +43,7 @@ submitsearch.addEventListener('click', (e) => {
     document.querySelector('.movies').innerHTML = '';
     
     // Fetch API
-    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchValue}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchValue}`)
     .then((res) => res.json())
     .then((data) => {
         // Handle Error
