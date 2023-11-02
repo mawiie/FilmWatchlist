@@ -53,7 +53,7 @@ submitsearch.addEventListener('click', (e) => {
                 <p>Movie not found</p>`
         }else{
         for (let movie of data.Search){
-            fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`)
+            fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`)
             .then((res) => res.json())
             .then((data) => { 
                 movies.classList.add('show');
