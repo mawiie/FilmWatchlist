@@ -1,0 +1,225 @@
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+header{
+    background: url('images/film_background.png') no-repeat;
+    background-size: cover;
+    background-color: rgb(40, 38, 38);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+header h1{
+    font-weight: 800;
+    font-size: 3rem;  
+}
+
+.search-form{
+    position: absolute;
+    top: 180px;
+    left: auto;
+    right: auto;
+    /* align-self: center; */
+    display:flex;
+    flex-direction: row;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    background: #F9FAFB;
+    margin-bottom: 50px;
+}
+
+.search-form input,
+.search-form button{
+    /* height: 20px; */
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.search-form input{
+    width: 500px;
+    padding: 15px 20px 15px 40px;
+}
+
+.search-form button{
+    padding: 10px 20px;
+}
+
+.search-form__input{
+    position: relative;
+}
+
+.search-form__input i{
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    color: rgb(40, 38, 38);
+}
+
+.movies{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #DFDDDD;
+}
+
+.fa-film, 
+.fa-triangle-exclamation{
+    font-size: 70px;
+}
+
+.movies p{
+    color: #DFDDDD;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+}
+
+.fa-circle-plus,
+.fa-circle-minus{
+    font-size: 14px;
+    color: #363636;
+    margin-right: 5px;
+}
+
+.add-movie a{
+    color: #363636;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+}
+
+#submit-search{
+    cursor: pointer;
+}
+
+
+/* Styling for populated state movies page */
+
+.show{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+
+.each-movie{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 500px;
+    align-items: center;
+    /* justify-content: center; */
+    height: 500px;
+    margin: 0 auto;
+    border-bottom: 2px solid #DFDDDD;
+    padding: 10px;
+}
+
+.each-movie h2,
+.each-movie p{
+    color: #000;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 111.111% */
+}
+
+#movie-plot{
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* truncate to 4 lines */
+    -webkit-line-clamp: 7;
+}
+
+@media screen and (max-width: 768px) {
+    #movie-plot{
+        -webkit-line-clamp: 4;
+    }
+}
+
+#movie-plot,
+.movie-title,
+.movie-info{
+    width: 85%;
+}
+
+.movie-image{
+    width: 100;
+    height: 70%;
+    background: #DFDDDD;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+}
+
+.movie-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.movie-title,
+.movie-info{
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.movie-info a,
+#remove-movie{
+    color: black;
+}
+
+/* .each_movie.nth-child(1){
+    margin-top: 300px;
+    color:green;
+} */
+
+#remove-movie{
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+#remove-movie {
+    cursor: pointer;
+    background: None;
+    font-size: 16px;
+    align-items: center;
+}
+
+#remove-movie:hover {
+    text-decoration: underline;
+    color: red;
+}

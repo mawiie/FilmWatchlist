@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Movie Search</title>
+
+        <!-- CSS File -->
+        <link rel="stylesheet" href="/style.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!-- Your content goes here -->
+        <header>
+            <h1>Find your film</h1>
+            <a href="watchlist.html"> My Watchlist</a>
+            <form name="search-form" method="get" class="search-form">
+                <div class="search-form__input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id='search' name="search" placeholder= 'Search for a movie'>
+                </div>
+                <button id="submit-search" type="submit">Search</button>
+            </form>
+        </header>
+        <main>
+            <div class="movies">
+                <i class="fa-solid fa-film" ></i>
+                <p>Start exploring</p>
+            </div>
+        </main>
+    </body>
+
+    <script src="home.js" type="module"></script>
+</html>
