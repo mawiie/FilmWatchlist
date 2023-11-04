@@ -13,7 +13,9 @@ const addMovie = document.querySelector('.add-movie');
 // Read data from firebase
 
 function readData() {
+    // Clear Movies from DOM
     addMovie.innerHTML = ''
+
     get(watchlistDb).then((snapshot) => {
         if (snapshot.exists()) {
             addMovie.innerHTML = '';
@@ -66,7 +68,7 @@ function createMovieHTML(movie, key) {
         const removeWatchlist = newDiv.querySelector('#remove-movie')
 
         removeWatchlist.addEventListener('click', (e) => {
-            // e.preventDefault();
+            e.preventDefault();
             remove(key);
         })
 
