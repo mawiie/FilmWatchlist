@@ -60,7 +60,7 @@ function handleSearchSubmit(e) {
 }
 
 function fetchMovies(searchValue) {
-    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchValue}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchValue}`)
     .then((res) => res.json())
     .then((data) => {
 
@@ -77,7 +77,7 @@ function fetchMovies(searchValue) {
 
 function displayMovies(movieList) {
     for (let movie of movieList){
-        fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`)
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${movie.Title}&plot=full`)
         .then((res) => res.json())
         .then((data) => { 
             movies.classList.add('show');
@@ -102,7 +102,7 @@ function createMovieHTML(movie, data) {
         e.preventDefault();
         addMovie(movie, data);
     })
-    
+
     return newDiv
 }
 
